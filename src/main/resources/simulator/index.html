@@ -12,7 +12,21 @@
 </head>
 <body>
 
-<h1>1</h1>
+<div id="app">
+    <el-button>{{ message }}</el-button>
+</div>
+<script>
+    const App = {
+        data() {
+            return {
+                message: "Start Change",
+            };
+        },
+    };
+    const app = Vue.createApp(App);
+    app.use(ElementPlus);
+    app.mount("#app");
+</script>
 
 </body>
 </html>
